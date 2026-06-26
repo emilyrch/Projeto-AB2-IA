@@ -1,0 +1,1043 @@
+{
+  "domain": "Suporte técnico de computadores",
+  "description": "Base demonstrativa para diagnosticar problemas comuns em computadores e recomendar ações. A shell é genérica e esta base pode ser substituída por outro domínio em JSON.",
+  "facts": [
+    {
+      "id": "computador_lento",
+      "nome": "Computador lento",
+      "pergunta": "O computador está lento?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "desempenho",
+      "descricao": "Indica lentidão geral no uso."
+    },
+    {
+      "id": "computador_desliga_sozinho",
+      "nome": "Desliga sozinho",
+      "pergunta": "O computador desliga sozinho?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "energia",
+      "descricao": "Desligamento inesperado durante o uso."
+    },
+    {
+      "id": "temperatura_alta",
+      "nome": "Temperatura alta",
+      "pergunta": "A temperatura do computador está alta?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "hardware",
+      "descricao": "Sinal de aquecimento excessivo."
+    },
+    {
+      "id": "ventoinha_ruidosa",
+      "nome": "Ventoinha ruidosa",
+      "pergunta": "A ventoinha está fazendo muito ruído?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "hardware",
+      "descricao": "Pode indicar esforço de refrigeração ou sujeira."
+    },
+    {
+      "id": "tela_azul",
+      "nome": "Tela azul",
+      "pergunta": "O computador apresentou tela azul?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "sistema",
+      "descricao": "Erro crítico do sistema operacional."
+    },
+    {
+      "id": "reinicia_frequentemente",
+      "nome": "Reinicia frequentemente",
+      "pergunta": "O computador reinicia frequentemente?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "sistema",
+      "descricao": "Reinicializações inesperadas."
+    },
+    {
+      "id": "programas_travando",
+      "nome": "Programas travando",
+      "pergunta": "Os programas estão travando?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "software",
+      "descricao": "Aplicativos deixam de responder."
+    },
+    {
+      "id": "erro_ao_iniciar",
+      "nome": "Erro ao iniciar",
+      "pergunta": "Aparece erro ao iniciar o computador?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "sistema",
+      "descricao": "Falha durante boot."
+    },
+    {
+      "id": "disco_100_porcento",
+      "nome": "Disco em 100%",
+      "pergunta": "O uso do disco fica em 100%?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "armazenamento",
+      "descricao": "Uso intenso do HD ou SSD."
+    },
+    {
+      "id": "arquivos_corrompidos",
+      "nome": "Arquivos corrompidos",
+      "pergunta": "Há arquivos corrompidos ou inacessíveis?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "armazenamento",
+      "descricao": "Sinal de falha de armazenamento."
+    },
+    {
+      "id": "popups_estranhos",
+      "nome": "Pop-ups estranhos",
+      "pergunta": "Aparecem pop-ups estranhos?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "segurança",
+      "descricao": "Possível infecção por malware."
+    },
+    {
+      "id": "antivirus_desativado",
+      "nome": "Antivírus desativado",
+      "pergunta": "O antivírus está desativado?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "segurança",
+      "descricao": "Proteção inativa."
+    },
+    {
+      "id": "navegador_redirecionando",
+      "nome": "Navegador redirecionando",
+      "pergunta": "O navegador redireciona para páginas desconhecidas?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "segurança",
+      "descricao": "Comportamento típico de adware."
+    },
+    {
+      "id": "sem_internet",
+      "nome": "Sem internet",
+      "pergunta": "O computador está sem internet?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "rede",
+      "descricao": "Ausência de conexão."
+    },
+    {
+      "id": "wifi_nao_conecta",
+      "nome": "Wi-Fi não conecta",
+      "pergunta": "O Wi-Fi não conecta?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "rede",
+      "descricao": "Falha ao conectar à rede sem fio."
+    },
+    {
+      "id": "cabo_rede_desconectado",
+      "nome": "Cabo de rede desconectado",
+      "pergunta": "O cabo de rede está desconectado ou frouxo?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "rede",
+      "descricao": "Problema físico de conexão."
+    },
+    {
+      "id": "driver_desatualizado",
+      "nome": "Driver desatualizado",
+      "pergunta": "Há driver desatualizado?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "driver",
+      "descricao": "Driver antigo ou incompatível."
+    },
+    {
+      "id": "periferico_nao_funciona",
+      "nome": "Periférico não funciona",
+      "pergunta": "Algum periférico não funciona?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "driver",
+      "descricao": "Teclado, mouse, impressora ou outro dispositivo falha."
+    },
+    {
+      "id": "fonte_fazendo_ruido",
+      "nome": "Fonte fazendo ruído",
+      "pergunta": "A fonte está fazendo ruído anormal?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "energia",
+      "descricao": "Ruído vindo da fonte de alimentação."
+    },
+    {
+      "id": "cheiro_queimado",
+      "nome": "Cheiro de queimado",
+      "pergunta": "Há cheiro de queimado?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "energia",
+      "descricao": "Indício de falha elétrica."
+    },
+    {
+      "id": "computador_nao_liga",
+      "nome": "Computador não liga",
+      "pergunta": "O computador não liga?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "energia",
+      "descricao": "Máquina não inicializa."
+    },
+    {
+      "id": "bipes_ao_ligar",
+      "nome": "Bipes ao ligar",
+      "pergunta": "O computador emite bipes ao ligar?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "hardware",
+      "descricao": "Códigos sonoros da placa-mãe."
+    },
+    {
+      "id": "memoria_insuficiente",
+      "nome": "Memória insuficiente",
+      "pergunta": "O sistema indica memória insuficiente?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "memória",
+      "descricao": "Falta de RAM disponível."
+    },
+    {
+      "id": "uso_cpu_alto",
+      "nome": "Uso de CPU alto",
+      "pergunta": "O uso de CPU está alto?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "desempenho",
+      "descricao": "Processador sob carga elevada."
+    },
+    {
+      "id": "uso_ram_alto",
+      "nome": "Uso de RAM alto",
+      "pergunta": "O uso de RAM está alto?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "memória",
+      "descricao": "Memória quase esgotada."
+    },
+    {
+      "id": "sistema_operacional_desatualizado",
+      "nome": "Sistema operacional desatualizado",
+      "pergunta": "O sistema operacional está desatualizado?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "sistema",
+      "descricao": "Sistema sem atualizações recentes."
+    },
+    {
+      "id": "queda_de_energia_recente",
+      "nome": "Queda de energia recente",
+      "pergunta": "Houve queda de energia recente?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "energia",
+      "descricao": "Evento que pode danificar fonte ou disco."
+    },
+    {
+      "id": "problema_apos_atualizacao",
+      "nome": "Problema após atualização",
+      "pergunta": "O problema começou após uma atualização?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "driver",
+      "descricao": "Falha posterior a update."
+    },
+    {
+      "id": "tela_congelando",
+      "nome": "Tela congelando",
+      "pergunta": "A tela está congelando?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "sistema",
+      "descricao": "Sistema para de responder visualmente."
+    },
+    {
+      "id": "aplicativos_fechando_sozinhos",
+      "nome": "Aplicativos fechando sozinhos",
+      "pergunta": "Aplicativos fecham sozinhos?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "software",
+      "descricao": "Encerramento inesperado de programas."
+    },
+    {
+      "id": "barulho_no_hd",
+      "nome": "Barulho no HD",
+      "pergunta": "O HD faz barulhos de estalo ou raspagem?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "armazenamento",
+      "descricao": "Ruído mecânico anormal."
+    },
+    {
+      "id": "rede_lenta",
+      "nome": "Rede lenta",
+      "pergunta": "A internet está muito lenta?",
+      "tipo": "booleano",
+      "opcoes": [
+        "sim",
+        "nao",
+        "nao_sei"
+      ],
+      "categoria": "rede",
+      "descricao": "Conexão instável ou lenta."
+    }
+  ],
+  "initial_facts": {
+    "computador_lento": "sim",
+    "bipes_ao_ligar": "sim",
+    "uso_cpu_alto": "sim"
+  },
+  "inferred_facts": {},
+  "rules": [
+    {
+      "id": "R01",
+      "nome": "Superaquecimento por temperatura e desligamento",
+      "condicoes": [
+        {
+          "fato": "temperatura_alta",
+          "operador": "=",
+          "valor": "sim"
+        },
+        {
+          "fato": "computador_desliga_sozinho",
+          "operador": "=",
+          "valor": "sim"
+        }
+      ],
+      "conclusao": {
+        "fato": "diagnostico",
+        "valor": "superaquecimento"
+      },
+      "recomendacao": "Limpar entradas de ar, verificar ventoinhas e trocar a pasta térmica se necessário.",
+      "explicacao": "Temperatura alta combinada com desligamentos indica proteção térmica.",
+      "prioridade": 10
+    },
+    {
+      "id": "R02",
+      "nome": "Superaquecimento por ventoinha e congelamento",
+      "condicoes": [
+        {
+          "fato": "ventoinha_ruidosa",
+          "operador": "=",
+          "valor": "sim"
+        },
+        {
+          "fato": "tela_congelando",
+          "operador": "=",
+          "valor": "sim"
+        },
+        {
+          "fato": "temperatura_alta",
+          "operador": "=",
+          "valor": "sim"
+        }
+      ],
+      "conclusao": {
+        "fato": "diagnostico",
+        "valor": "superaquecimento"
+      },
+      "recomendacao": "Verificar fluxo de ar, remover poeira e testar a ventoinha.",
+      "explicacao": "Ruído de ventoinha, temperatura alta e travamentos reforçam falha de refrigeração.",
+      "prioridade": 9
+    },
+    {
+      "id": "R03",
+      "nome": "RAM por tela azul e reinicialização",
+      "condicoes": [
+        {
+          "fato": "tela_azul",
+          "operador": "=",
+          "valor": "sim"
+        },
+        {
+          "fato": "reinicia_frequentemente",
+          "operador": "=",
+          "valor": "sim"
+        }
+      ],
+      "conclusao": {
+        "fato": "diagnostico",
+        "valor": "falha_memoria_ram"
+      },
+      "recomendacao": "Executar teste de memória, limpar contatos e substituir o módulo defeituoso.",
+      "explicacao": "Tela azul e reinicializações frequentes são sintomas comuns de RAM instável.",
+      "prioridade": 10
+    },
+    {
+      "id": "R04",
+      "nome": "RAM por bipes e computador sem ligar",
+      "condicoes": [
+        {
+          "fato": "bipes_ao_ligar",
+          "operador": "=",
+          "valor": "sim"
+        },
+        {
+          "fato": "computador_nao_liga",
+          "operador": "=",
+          "valor": "sim"
+        }
+      ],
+      "conclusao": {
+        "fato": "diagnostico",
+        "valor": "falha_memoria_ram"
+      },
+      "recomendacao": "Consultar o código de bipes, recolocar os módulos de RAM e testar individualmente.",
+      "explicacao": "Bipes no POST com computador sem ligar podem apontar falha física de memória.",
+      "prioridade": 9
+    },
+    {
+      "id": "R05",
+      "nome": "Sobrecarga por memória insuficiente",
+      "condicoes": [
+        {
+          "fato": "uso_ram_alto",
+          "operador": "=",
+          "valor": "sim"
+        },
+        {
+          "fato": "aplicativos_fechando_sozinhos",
+          "operador": "=",
+          "valor": "sim"
+        },
+        {
+          "fato": "memoria_insuficiente",
+          "operador": "=",
+          "valor": "sim"
+        }
+      ],
+      "conclusao": {
+        "fato": "diagnostico",
+        "valor": "sobrecarga_de_recursos"
+      },
+      "recomendacao": "Fechar aplicativos pesados, revisar programas em segundo plano e avaliar expansão de memória.",
+      "explicacao": "Memória insuficiente com RAM alta e aplicativos fechando indica sobrecarga, não necessariamente RAM defeituosa.",
+      "prioridade": 7
+    },
+    {
+      "id": "R06",
+      "nome": "HD/SSD por disco cheio de uso e arquivos corrompidos",
+      "condicoes": [
+        {
+          "fato": "disco_100_porcento",
+          "operador": "=",
+          "valor": "sim"
+        },
+        {
+          "fato": "arquivos_corrompidos",
+          "operador": "=",
+          "valor": "sim"
+        }
+      ],
+      "conclusao": {
+        "fato": "diagnostico",
+        "valor": "problema_hd_ssd"
+      },
+      "recomendacao": "Verificar a saúde do disco, fazer backup e substituir a unidade se necessário.",
+      "explicacao": "Uso constante de disco e corrupção de arquivos sugerem falha de armazenamento.",
+      "prioridade": 10
+    },
+    {
+      "id": "R07",
+      "nome": "HD por erro de boot e ruído",
+      "condicoes": [
+        {
+          "fato": "erro_ao_iniciar",
+          "operador": "=",
+          "valor": "sim"
+        },
+        {
+          "fato": "barulho_no_hd",
+          "operador": "=",
+          "valor": "sim"
+        }
+      ],
+      "conclusao": {
+        "fato": "diagnostico",
+        "valor": "problema_hd_ssd"
+      },
+      "recomendacao": "Evitar uso intenso, salvar dados importantes e testar o disco com ferramenta SMART.",
+      "explicacao": "Erro de inicialização com ruído físico é forte sinal de falha do disco.",
+      "prioridade": 9
+    },
+    {
+      "id": "R08",
+      "nome": "HD/SSD por lentidão e disco 100%",
+      "condicoes": [
+        {
+          "fato": "computador_lento",
+          "operador": "=",
+          "valor": "sim"
+        },
+        {
+          "fato": "disco_100_porcento",
+          "operador": "=",
+          "valor": "sim"
+        }
+      ],
+      "conclusao": {
+        "fato": "diagnostico",
+        "valor": "problema_hd_ssd"
+      },
+      "recomendacao": "Checar processos que usam disco, executar diagnóstico e considerar troca para SSD.",
+      "explicacao": "Lentidão associada a disco em 100% pode indicar gargalo ou defeito.",
+      "prioridade": 6
+    },
+    {
+      "id": "R09",
+      "nome": "Malware por pop-ups e redirecionamento",
+      "condicoes": [
+        {
+          "fato": "popups_estranhos",
+          "operador": "=",
+          "valor": "sim"
+        },
+        {
+          "fato": "navegador_redirecionando",
+          "operador": "=",
+          "valor": "sim"
+        }
+      ],
+      "conclusao": {
+        "fato": "diagnostico",
+        "valor": "malware"
+      },
+      "recomendacao": "Executar antivírus, remover programas suspeitos e redefinir o navegador.",
+      "explicacao": "Pop-ups e redirecionamentos são sinais típicos de adware ou malware.",
+      "prioridade": 10
+    },
+    {
+      "id": "R10",
+      "nome": "Malware por antivírus desativado e lentidão",
+      "condicoes": [
+        {
+          "fato": "antivirus_desativado",
+          "operador": "=",
+          "valor": "sim"
+        },
+        {
+          "fato": "computador_lento",
+          "operador": "=",
+          "valor": "sim"
+        },
+        {
+          "fato": "uso_cpu_alto",
+          "operador": "=",
+          "valor": "sim"
+        }
+      ],
+      "conclusao": {
+        "fato": "diagnostico",
+        "valor": "malware"
+      },
+      "recomendacao": "Ativar proteção, atualizar assinaturas e executar varredura completa.",
+      "explicacao": "Proteção desativada com uso alto de CPU pode indicar processo malicioso.",
+      "prioridade": 8
+    },
+    {
+      "id": "R11",
+      "nome": "Fonte por não ligar e ruído",
+      "condicoes": [
+        {
+          "fato": "computador_nao_liga",
+          "operador": "=",
+          "valor": "sim"
+        },
+        {
+          "fato": "fonte_fazendo_ruido",
+          "operador": "=",
+          "valor": "sim"
+        }
+      ],
+      "conclusao": {
+        "fato": "diagnostico",
+        "valor": "problema_fonte"
+      },
+      "recomendacao": "Verificar cabos, testar outra fonte e evitar ligar novamente se houver cheiro de queimado.",
+      "explicacao": "Falha ao ligar com ruído na fonte sugere problema de alimentação.",
+      "prioridade": 10
+    },
+    {
+      "id": "R12",
+      "nome": "Fonte por cheiro queimado",
+      "condicoes": [
+        {
+          "fato": "cheiro_queimado",
+          "operador": "=",
+          "valor": "sim"
+        },
+        {
+          "fato": "computador_desliga_sozinho",
+          "operador": "=",
+          "valor": "sim"
+        }
+      ],
+      "conclusao": {
+        "fato": "diagnostico",
+        "valor": "problema_fonte"
+      },
+      "recomendacao": "Desligar o equipamento, não insistir na partida e testar com técnico qualificado.",
+      "explicacao": "Cheiro de queimado com desligamentos indica risco elétrico.",
+      "prioridade": 10
+    },
+    {
+      "id": "R13",
+      "nome": "Fonte por queda de energia e não liga",
+      "condicoes": [
+        {
+          "fato": "queda_de_energia_recente",
+          "operador": "=",
+          "valor": "sim"
+        },
+        {
+          "fato": "computador_nao_liga",
+          "operador": "=",
+          "valor": "sim"
+        }
+      ],
+      "conclusao": {
+        "fato": "diagnostico",
+        "valor": "problema_fonte"
+      },
+      "recomendacao": "Verificar filtro de linha, cabos, tomada e testar outra fonte.",
+      "explicacao": "Queda de energia pode danificar a fonte e impedir a inicialização.",
+      "prioridade": 8
+    },
+    {
+      "id": "R14",
+      "nome": "Driver por periférico e driver desatualizado",
+      "condicoes": [
+        {
+          "fato": "periferico_nao_funciona",
+          "operador": "=",
+          "valor": "sim"
+        },
+        {
+          "fato": "driver_desatualizado",
+          "operador": "=",
+          "valor": "sim"
+        }
+      ],
+      "conclusao": {
+        "fato": "diagnostico",
+        "valor": "problema_driver"
+      },
+      "recomendacao": "Atualizar ou reinstalar os drivers pelo site do fabricante.",
+      "explicacao": "Periférico sem funcionar com driver antigo indica incompatibilidade.",
+      "prioridade": 10
+    },
+    {
+      "id": "R15",
+      "nome": "Driver por problema após atualização",
+      "condicoes": [
+        {
+          "fato": "problema_apos_atualizacao",
+          "operador": "=",
+          "valor": "sim"
+        },
+        {
+          "fato": "periferico_nao_funciona",
+          "operador": "=",
+          "valor": "sim"
+        }
+      ],
+      "conclusao": {
+        "fato": "diagnostico",
+        "valor": "problema_driver"
+      },
+      "recomendacao": "Reverter driver recente, reinstalar versão estável ou buscar atualização corrigida.",
+      "explicacao": "Falha iniciada após atualização frequentemente envolve driver incompatível.",
+      "prioridade": 9
+    },
+    {
+      "id": "R16",
+      "nome": "Driver por sistema desatualizado",
+      "condicoes": [
+        {
+          "fato": "sistema_operacional_desatualizado",
+          "operador": "=",
+          "valor": "sim"
+        },
+        {
+          "fato": "driver_desatualizado",
+          "operador": "=",
+          "valor": "sim"
+        }
+      ],
+      "conclusao": {
+        "fato": "diagnostico",
+        "valor": "problema_driver"
+      },
+      "recomendacao": "Atualizar o sistema operacional e depois reinstalar os drivers necessários.",
+      "explicacao": "Sistema e drivers desatualizados geram incompatibilidades.",
+      "prioridade": 6
+    },
+    {
+      "id": "R17",
+      "nome": "Rede por internet e Wi-Fi",
+      "condicoes": [
+        {
+          "fato": "sem_internet",
+          "operador": "=",
+          "valor": "sim"
+        },
+        {
+          "fato": "wifi_nao_conecta",
+          "operador": "=",
+          "valor": "sim"
+        }
+      ],
+      "conclusao": {
+        "fato": "diagnostico",
+        "valor": "problema_rede"
+      },
+      "recomendacao": "Reiniciar roteador, esquecer e reconectar a rede e atualizar o driver de rede.",
+      "explicacao": "Sem internet e Wi-Fi sem conexão apontam problema de rede.",
+      "prioridade": 10
+    },
+    {
+      "id": "R18",
+      "nome": "Rede por cabo desconectado",
+      "condicoes": [
+        {
+          "fato": "sem_internet",
+          "operador": "=",
+          "valor": "sim"
+        },
+        {
+          "fato": "cabo_rede_desconectado",
+          "operador": "=",
+          "valor": "sim"
+        }
+      ],
+      "conclusao": {
+        "fato": "diagnostico",
+        "valor": "problema_rede"
+      },
+      "recomendacao": "Verificar cabo, porta do roteador, placa de rede e configuração IP.",
+      "explicacao": "Cabo desconectado é causa direta de perda de conexão cabeada.",
+      "prioridade": 9
+    },
+    {
+      "id": "R19",
+      "nome": "Rede lenta por driver",
+      "condicoes": [
+        {
+          "fato": "rede_lenta",
+          "operador": "=",
+          "valor": "sim"
+        },
+        {
+          "fato": "driver_desatualizado",
+          "operador": "=",
+          "valor": "sim"
+        }
+      ],
+      "conclusao": {
+        "fato": "diagnostico",
+        "valor": "problema_rede"
+      },
+      "recomendacao": "Atualizar driver de rede, reiniciar equipamentos e testar outro DNS.",
+      "explicacao": "Rede lenta com driver antigo pode ser causada por driver de rede.",
+      "prioridade": 7
+    },
+    {
+      "id": "R20",
+      "nome": "Sistema operacional por atualização pendente",
+      "condicoes": [
+        {
+          "fato": "sistema_operacional_desatualizado",
+          "operador": "=",
+          "valor": "sim"
+        },
+        {
+          "fato": "programas_travando",
+          "operador": "=",
+          "valor": "sim"
+        }
+      ],
+      "conclusao": {
+        "fato": "diagnostico",
+        "valor": "sistema_desatualizado"
+      },
+      "recomendacao": "Instalar atualizações do sistema, reiniciar e verificar compatibilidade dos aplicativos.",
+      "explicacao": "Sistema desatualizado pode causar travamentos e incompatibilidades.",
+      "prioridade": 5
+    },
+    {
+      "id": "R21",
+      "nome": "Desempenho por CPU e lentidão",
+      "condicoes": [
+        {
+          "fato": "computador_lento",
+          "operador": "=",
+          "valor": "sim"
+        },
+        {
+          "fato": "uso_cpu_alto",
+          "operador": "=",
+          "valor": "sim"
+        },
+        {
+          "fato": "programas_travando",
+          "operador": "=",
+          "valor": "sim"
+        }
+      ],
+      "conclusao": {
+        "fato": "diagnostico",
+        "valor": "sobrecarga_de_recursos"
+      },
+      "recomendacao": "Fechar processos pesados, revisar inicialização automática e considerar upgrade de hardware.",
+      "explicacao": "CPU alta com lentidão e travamentos indica sobrecarga de recursos.",
+      "prioridade": 4
+    },
+    {
+      "id": "R22",
+      "nome": "Malware por fechamento e pop-ups",
+      "condicoes": [
+        {
+          "fato": "aplicativos_fechando_sozinhos",
+          "operador": "=",
+          "valor": "sim"
+        },
+        {
+          "fato": "popups_estranhos",
+          "operador": "=",
+          "valor": "sim"
+        }
+      ],
+      "conclusao": {
+        "fato": "diagnostico",
+        "valor": "malware"
+      },
+      "recomendacao": "Executar varredura offline, remover extensões suspeitas e revisar programas instalados.",
+      "explicacao": "Aplicativos fechando com pop-ups pode ocorrer por software malicioso.",
+      "prioridade": 7
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "superaquecimento",
+      "nome": "Superaquecimento",
+      "fato": "diagnostico",
+      "valor": "superaquecimento",
+      "recomendacao": "Limpar entradas de ar, verificar ventoinhas e trocar pasta térmica.",
+      "descricao": "Aquecimento excessivo do equipamento."
+    },
+    {
+      "id": "falha_memoria_ram",
+      "nome": "Falha de memória RAM",
+      "fato": "diagnostico",
+      "valor": "falha_memoria_ram",
+      "recomendacao": "Testar memória, limpar contatos e substituir módulo defeituoso.",
+      "descricao": "Instabilidade ou defeito em módulos de RAM."
+    },
+    {
+      "id": "problema_hd_ssd",
+      "nome": "Problema no HD/SSD",
+      "fato": "diagnostico",
+      "valor": "problema_hd_ssd",
+      "recomendacao": "Verificar saúde do disco, fazer backup e substituir unidade se necessário.",
+      "descricao": "Falhas no armazenamento."
+    },
+    {
+      "id": "malware",
+      "nome": "Infecção por malware",
+      "fato": "diagnostico",
+      "valor": "malware",
+      "recomendacao": "Executar antivírus, remover programas suspeitos e redefinir navegador.",
+      "descricao": "Presença provável de software malicioso."
+    },
+    {
+      "id": "problema_fonte",
+      "nome": "Problema de fonte de alimentação",
+      "fato": "diagnostico",
+      "valor": "problema_fonte",
+      "recomendacao": "Verificar cabos, testar outra fonte e evitar ligar se houver cheiro de queimado.",
+      "descricao": "Falha de alimentação elétrica."
+    },
+    {
+      "id": "problema_driver",
+      "nome": "Problema de driver",
+      "fato": "diagnostico",
+      "valor": "problema_driver",
+      "recomendacao": "Atualizar, reinstalar ou reverter drivers problemáticos.",
+      "descricao": "Driver ausente, antigo ou incompatível."
+    },
+    {
+      "id": "problema_rede",
+      "nome": "Falha de conexão com a internet",
+      "fato": "diagnostico",
+      "valor": "problema_rede",
+      "recomendacao": "Reiniciar roteador, verificar cabo e atualizar driver de rede.",
+      "descricao": "Falha de rede cabeada ou Wi-Fi."
+    },
+    {
+      "id": "sistema_desatualizado",
+      "nome": "Sistema operacional desatualizado",
+      "fato": "diagnostico",
+      "valor": "sistema_desatualizado",
+      "recomendacao": "Instalar atualizações pendentes e revisar compatibilidade.",
+      "descricao": "Problemas causados por sistema sem atualização."
+    },
+    {
+      "id": "sobrecarga_de_recursos",
+      "nome": "Sobrecarga de recursos",
+      "fato": "diagnostico",
+      "valor": "sobrecarga_de_recursos",
+      "recomendacao": "Fechar processos pesados, revisar inicialização e considerar upgrade.",
+      "descricao": "Uso excessivo de CPU, RAM ou disco."
+    }
+  ],
+  "recommendations": {
+    "superaquecimento": "Limpar entradas de ar, verificar ventoinhas e trocar pasta térmica.",
+    "falha_memoria_ram": "Testar memória, limpar contatos e substituir módulo defeituoso.",
+    "problema_hd_ssd": "Verificar saúde do disco, fazer backup e substituir unidade se necessário.",
+    "malware": "Executar antivírus, remover programas suspeitos e redefinir navegador.",
+    "problema_fonte": "Verificar cabos, testar outra fonte e evitar ligar se houver cheiro de queimado.",
+    "problema_driver": "Atualizar, reinstalar ou reverter drivers problemáticos.",
+    "problema_rede": "Reiniciar roteador, verificar cabo e atualizar driver de rede.",
+    "sistema_desatualizado": "Instalar atualizações pendentes e revisar compatibilidade.",
+    "sobrecarga_de_recursos": "Fechar processos pesados, revisar inicialização e considerar upgrade."
+  },
+  "fired_rules_history": [],
+  "asked_questions_history": []
+}
