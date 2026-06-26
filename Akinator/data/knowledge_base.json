@@ -1,0 +1,138 @@
+{
+  "domain": "Animais",
+  "description": "Base de conhecimento do Akinator para identificar animais com base em atributos.",
+  "attributes": [
+    { "id": "mamifero", "pergunta": "É um mamífero?" },
+    { "id": "ave", "pergunta": "É uma ave?" },
+    { "id": "reptil", "pergunta": "É um réptil?" },
+    { "id": "peixe", "pergunta": "É um peixe?" },
+    { "id": "inseto", "pergunta": "É um inseto?" },
+    { "id": "domestico", "pergunta": "É um animal doméstico (de estimação)?" },
+    { "id": "carnivoro", "pergunta": "É carnívoro (come carne)?" },
+    { "id": "herbivoro", "pergunta": "É herbívoro (come apenas plantas)?" },
+    { "id": "voa", "pergunta": "Consegue voar?" },
+    { "id": "aquatico", "pergunta": "Vive na água ou passa boa parte do tempo nela?" },
+    { "id": "selvagem", "pergunta": "É um animal selvagem (não doméstico)?" },
+    { "id": "grande_porte", "pergunta": "É de grande porte (maior que um cachorro médio)?" },
+    { "id": "tem_penas", "pergunta": "Tem penas?" },
+    { "id": "tem_pelo", "pergunta": "Tem pelo?" },
+    { "id": "tem_escamas", "pergunta": "Tem escamas?" },
+    { "id": "venenoso", "pergunta": "É venenoso ou peçonhento?" },
+    { "id": "noturno", "pergunta": "É predominantemente noturno?" },
+    { "id": "africa", "pergunta": "É originário da África?" },
+    { "id": "brasil", "pergunta": "É encontrado no Brasil?" },
+    { "id": "corre_rapido", "pergunta": "É conhecido por ser muito veloz (terrestre)?" }
+  ],
+  "entities": [
+    {
+      "id": "cachorro",
+      "nome": "Cachorro",
+      "atributos": { "mamifero": true, "ave": false, "reptil": false, "peixe": false, "inseto": false, "domestico": true, "carnivoro": true, "herbivoro": false, "voa": false, "aquatico": false, "selvagem": false, "grande_porte": false, "tem_penas": false, "tem_pelo": true, "tem_escamas": false, "venenoso": false, "noturno": false, "africa": false, "brasil": true, "corre_rapido": false }
+    },
+    {
+      "id": "gato",
+      "nome": "Gato",
+      "atributos": { "mamifero": true, "ave": false, "reptil": false, "peixe": false, "inseto": false, "domestico": true, "carnivoro": true, "herbivoro": false, "voa": false, "aquatico": false, "selvagem": false, "grande_porte": false, "tem_penas": false, "tem_pelo": true, "tem_escamas": false, "venenoso": false, "noturno": true, "africa": false, "brasil": true, "corre_rapido": false }
+    },
+    {
+      "id": "leao",
+      "nome": "Leão",
+      "atributos": { "mamifero": true, "ave": false, "reptil": false, "peixe": false, "inseto": false, "domestico": false, "carnivoro": true, "herbivoro": false, "voa": false, "aquatico": false, "selvagem": true, "grande_porte": true, "tem_penas": false, "tem_pelo": true, "tem_escamas": false, "venenoso": false, "noturno": false, "africa": true, "brasil": false, "corre_rapido": true }
+    },
+    {
+      "id": "elefante",
+      "nome": "Elefante",
+      "atributos": { "mamifero": true, "ave": false, "reptil": false, "peixe": false, "inseto": false, "domestico": false, "carnivoro": false, "herbivoro": true, "voa": false, "aquatico": false, "selvagem": true, "grande_porte": true, "tem_penas": false, "tem_pelo": false, "tem_escamas": false, "venenoso": false, "noturno": false, "africa": true, "brasil": false, "corre_rapido": false }
+    },
+    {
+      "id": "aguia",
+      "nome": "Águia",
+      "atributos": { "mamifero": false, "ave": true, "reptil": false, "peixe": false, "inseto": false, "domestico": false, "carnivoro": true, "herbivoro": false, "voa": true, "aquatico": false, "selvagem": true, "grande_porte": false, "tem_penas": true, "tem_pelo": false, "tem_escamas": false, "venenoso": false, "noturno": false, "africa": false, "brasil": true, "corre_rapido": false }
+    },
+    {
+      "id": "papagaio",
+      "nome": "Papagaio",
+      "atributos": { "mamifero": false, "ave": true, "reptil": false, "peixe": false, "inseto": false, "domestico": true, "carnivoro": false, "herbivoro": true, "voa": true, "aquatico": false, "selvagem": false, "grande_porte": false, "tem_penas": true, "tem_pelo": false, "tem_escamas": false, "venenoso": false, "noturno": false, "africa": false, "brasil": true, "corre_rapido": false }
+    },
+    {
+      "id": "cobra",
+      "nome": "Cobra",
+      "atributos": { "mamifero": false, "ave": false, "reptil": true, "peixe": false, "inseto": false, "domestico": false, "carnivoro": true, "herbivoro": false, "voa": false, "aquatico": false, "selvagem": true, "grande_porte": false, "tem_penas": false, "tem_pelo": false, "tem_escamas": true, "venenoso": true, "noturno": true, "africa": false, "brasil": true, "corre_rapido": false }
+    },
+    {
+      "id": "crocodilo",
+      "nome": "Crocodilo",
+      "atributos": { "mamifero": false, "ave": false, "reptil": true, "peixe": false, "inseto": false, "domestico": false, "carnivoro": true, "herbivoro": false, "voa": false, "aquatico": true, "selvagem": true, "grande_porte": true, "tem_penas": false, "tem_pelo": false, "tem_escamas": true, "venenoso": false, "noturno": true, "africa": true, "brasil": false, "corre_rapido": false }
+    },
+    {
+      "id": "tubarao",
+      "nome": "Tubarão",
+      "atributos": { "mamifero": false, "ave": false, "reptil": false, "peixe": true, "inseto": false, "domestico": false, "carnivoro": true, "herbivoro": false, "voa": false, "aquatico": true, "selvagem": true, "grande_porte": true, "tem_penas": false, "tem_pelo": false, "tem_escamas": true, "venenoso": false, "noturno": false, "africa": false, "brasil": true, "corre_rapido": false }
+    },
+    {
+      "id": "golfinho",
+      "nome": "Golfinho",
+      "atributos": { "mamifero": true, "ave": false, "reptil": false, "peixe": false, "inseto": false, "domestico": false, "carnivoro": true, "herbivoro": false, "voa": false, "aquatico": true, "selvagem": true, "grande_porte": true, "tem_penas": false, "tem_pelo": false, "tem_escamas": false, "venenoso": false, "noturno": false, "africa": false, "brasil": true, "corre_rapido": false }
+    },
+    {
+      "id": "abelha",
+      "nome": "Abelha",
+      "atributos": { "mamifero": false, "ave": false, "reptil": false, "peixe": false, "inseto": true, "domestico": false, "carnivoro": false, "herbivoro": true, "voa": true, "aquatico": false, "selvagem": true, "grande_porte": false, "tem_penas": false, "tem_pelo": false, "tem_escamas": false, "venenoso": true, "noturno": false, "africa": false, "brasil": true, "corre_rapido": false }
+    },
+    {
+      "id": "borboleta",
+      "nome": "Borboleta",
+      "atributos": { "mamifero": false, "ave": false, "reptil": false, "peixe": false, "inseto": true, "domestico": false, "carnivoro": false, "herbivoro": true, "voa": true, "aquatico": false, "selvagem": true, "grande_porte": false, "tem_penas": false, "tem_pelo": false, "tem_escamas": false, "venenoso": false, "noturno": false, "africa": false, "brasil": true, "corre_rapido": false }
+    },
+    {
+      "id": "onca",
+      "nome": "Onça-pintada",
+      "atributos": { "mamifero": true, "ave": false, "reptil": false, "peixe": false, "inseto": false, "domestico": false, "carnivoro": true, "herbivoro": false, "voa": false, "aquatico": false, "selvagem": true, "grande_porte": true, "tem_penas": false, "tem_pelo": true, "tem_escamas": false, "venenoso": false, "noturno": true, "africa": false, "brasil": true, "corre_rapido": true }
+    },
+    {
+      "id": "girafa",
+      "nome": "Girafa",
+      "atributos": { "mamifero": true, "ave": false, "reptil": false, "peixe": false, "inseto": false, "domestico": false, "carnivoro": false, "herbivoro": true, "voa": false, "aquatico": false, "selvagem": true, "grande_porte": true, "tem_penas": false, "tem_pelo": true, "tem_escamas": false, "venenoso": false, "noturno": false, "africa": true, "brasil": false, "corre_rapido": false }
+    },
+    {
+      "id": "pinguim",
+      "nome": "Pinguim",
+      "atributos": { "mamifero": false, "ave": true, "reptil": false, "peixe": false, "inseto": false, "domestico": false, "carnivoro": true, "herbivoro": false, "voa": false, "aquatico": true, "selvagem": true, "grande_porte": false, "tem_penas": true, "tem_pelo": false, "tem_escamas": false, "venenoso": false, "noturno": false, "africa": false, "brasil": false, "corre_rapido": false }
+    },
+    {
+      "id": "morcego",
+      "nome": "Morcego",
+      "atributos": { "mamifero": true, "ave": false, "reptil": false, "peixe": false, "inseto": false, "domestico": false, "carnivoro": true, "herbivoro": false, "voa": true, "aquatico": false, "selvagem": true, "grande_porte": false, "tem_penas": false, "tem_pelo": true, "tem_escamas": false, "venenoso": false, "noturno": true, "africa": false, "brasil": true, "corre_rapido": false }
+    },
+    {
+      "id": "tartaruga",
+      "nome": "Tartaruga",
+      "atributos": { "mamifero": false, "ave": false, "reptil": true, "peixe": false, "inseto": false, "domestico": true, "carnivoro": false, "herbivoro": true, "voa": false, "aquatico": true, "selvagem": false, "grande_porte": false, "tem_penas": false, "tem_pelo": false, "tem_escamas": true, "venenoso": false, "noturno": false, "africa": false, "brasil": true, "corre_rapido": false }
+    },
+    {
+      "id": "cavalo",
+      "nome": "Cavalo",
+      "atributos": { "mamifero": true, "ave": false, "reptil": false, "peixe": false, "inseto": false, "domestico": true, "carnivoro": false, "herbivoro": true, "voa": false, "aquatico": false, "selvagem": false, "grande_porte": true, "tem_penas": false, "tem_pelo": true, "tem_escamas": false, "venenoso": false, "noturno": false, "africa": false, "brasil": true, "corre_rapido": true }
+    },
+    {
+      "id": "guepardo",
+      "nome": "Guepardo",
+      "atributos": { "mamifero": true, "ave": false, "reptil": false, "peixe": false, "inseto": false, "domestico": false, "carnivoro": true, "herbivoro": false, "voa": false, "aquatico": false, "selvagem": true, "grande_porte": true, "tem_penas": false, "tem_pelo": true, "tem_escamas": false, "venenoso": false, "noturno": false, "africa": true, "brasil": false, "corre_rapido": true }
+    },
+    {
+      "id": "aranha",
+      "nome": "Aranha",
+      "atributos": { "mamifero": false, "ave": false, "reptil": false, "peixe": false, "inseto": false, "domestico": false, "carnivoro": true, "herbivoro": false, "voa": false, "aquatico": false, "selvagem": true, "grande_porte": false, "tem_penas": false, "tem_pelo": false, "tem_escamas": false, "venenoso": true, "noturno": true, "africa": false, "brasil": true, "corre_rapido": false }
+    },
+    {
+      "id": "macaco",
+      "nome": "Macaco",
+      "atributos": { "mamifero": true, "ave": false, "reptil": false, "peixe": false, "inseto": false, "domestico": false, "carnivoro": false, "herbivoro": true, "voa": false, "aquatico": false, "selvagem": true, "grande_porte": false, "tem_penas": false, "tem_pelo": true, "tem_escamas": false, "venenoso": false, "noturno": false, "africa": false, "brasil": true, "corre_rapido": false }
+    },
+    {
+      "id": "urso",
+      "nome": "Urso",
+      "atributos": { "mamifero": true, "ave": false, "reptil": false, "peixe": false, "inseto": false, "domestico": false, "carnivoro": true, "herbivoro": false, "voa": false, "aquatico": false, "selvagem": true, "grande_porte": true, "tem_penas": false, "tem_pelo": true, "tem_escamas": false, "venenoso": false, "noturno": false, "africa": false, "brasil": false, "corre_rapido": false }
+    }
+  ]
+}
