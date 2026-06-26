@@ -1,4 +1,4 @@
-# Projeto AB2 — Inteligência Artificial 2026.1
+# Projeto AB2 Inteligência Artificial 2026.1
 
 **Disciplina:** Inteligência Artificial  
 **Período:** 2026.1  
@@ -27,7 +27,7 @@ Projeto-AB2-IA/
 
 ---
 
-## Questão 1 — Shell Genérica de Sistema Especialista
+## Questão 1 Shell Genérica de Sistema Especialista
 
 > **Pasta:** [ShellSistemaEspecialista/](ShellSistemaEspecialista/)
 
@@ -66,7 +66,7 @@ streamlit run app.py
 
 ---
 
-## Questão 2.1 — Sistema Akinator de Identificação de Animais
+## Questão 2.1 Sistema Akinator de Identificação de Animais
 
 > **Pasta:** [Akinator/](Akinator/)
 
@@ -106,7 +106,7 @@ streamlit run app.py
 
 ---
 
-## Questão 2.2 — Diagnóstico Médico com Redes Bayesianas
+## Questão 2.2 Diagnóstico Médico com Redes Bayesianas
 
 > **Pasta:** [RedesBayesianas/](RedesBayesianas/)
 
@@ -153,7 +153,7 @@ streamlit run app.py
 
 ---
 
-## Questão 3 — Agente Educacional Baseado em LLM
+## Questão 3 Agente Educacional Baseado em LLM
 
 > **Pasta:** [AgenteIA_LLM/](AgenteIA_LLM/)
 
@@ -215,7 +215,7 @@ Todos os projetos utilizam Python 3.11+. As dependências específicas estão em
 
 | Questão | Pasta | Pontuação máxima | Status |
 |---------|-------|-----------------|--------|
-| Q1 — Shell Sistema Especialista | `ShellSistemaEspecialista/` | 5 pts | ✅ |
-| Q2.1 — Akinator | `Akinator/` | parte de 3 pts | ✅ |
-| Q2.2 — Redes Bayesianas | `RedesBayesianas/` | parte de 3 pts | ✅ |
-| Q3 — Agente LLM | `AgenteIA_LLM/` | 2 pts | ✅ |
+| Q1 Shell Sistema Especialista | `ShellSistemaEspecialista/` | 5 pts | ✅ |
+| Q2.1 Akinator | `Akinator/` | parte de 3 pts | ✅ |
+| Q2.2 Redes Bayesianas | `RedesBayesianas/` | parte de 3 pts | ✅ |
+| Q3 Agente LLM | `AgenteIA_LLM/` | 2 pts | ✅ |
